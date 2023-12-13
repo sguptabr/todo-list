@@ -17,7 +17,6 @@ const App = () => {
       const updatedItems = [...items]
       updatedItems[edit] = todo
       setItems(updatedItems)
-      setEdit(null)
     } else {
       setItems((prevItems) => [...prevItems, todo]);
     }
