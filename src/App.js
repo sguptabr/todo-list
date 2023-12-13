@@ -13,10 +13,11 @@ const App = () => {
   const itemHandler = (event) => {
     event.preventDefault();
 
-    if (edit) {
+    if (edit !== -1) {
       const updatedItems = [...items]
       updatedItems[edit] = todo
       setItems(updatedItems)
+      setEdit(-1)
     } else {
       setItems((prevItems) => [...prevItems, todo]);
     }
